@@ -1,5 +1,9 @@
 # BERT
 
+Forked for the following modification. 
+1. Add the option to deal with Japanese sentences (Japanese sentences are regarded as Chinese in the original code).
+1. Add the processor class for our FAQ retrieval dataset ([project](https://github.com/ku-nlp/bert-based-faqir)).
+
 **\*\*\*\*\* New May 31st, 2019: Whole Word Masking Models \*\*\*\*\***
 
 This is a release of several new models which were the result of an improvement

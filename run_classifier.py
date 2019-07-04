@@ -99,6 +99,8 @@ flags.DEFINE_integer("iterations_per_loop", 1000,
 
 flags.DEFINE_bool("use_tpu", False, "Whether to use TPU or GPU/CPU.")
 
+flags.DEFINE_bool("japanese", False, "For Japanese")
+
 tf.flags.DEFINE_string(
     "tpu_name", None,
     "The Cloud TPU to use for training. This should be either the name "
@@ -817,7 +819,7 @@ def main(_):
   label_list = processor.get_labels()
 
   tokenizer = tokenization.FullTokenizer(
-      vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case)
+      vocab_file=FLAGS.vocab_file, do_lower_case=FLAGS.do_lower_case, japanese=FLAGS.japanese)
 
   tpu_cluster_resolver = None
   if FLAGS.use_tpu and FLAGS.tpu_name:
